@@ -3,14 +3,18 @@ import './Hero.css';
 
 const Hero = ({ onPlay }) => {
   return (
-    <div className="hero-container" style={{ backgroundImage: "url('/hero.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="hero-background" style={{ background: 'transparent' }}></div>
+    <div className="hero-container">
       <div className="hero-vignette"></div>
       
       <div className="hero-content">
-        <h1 className="hero-title">Aprende y Canta con Nosotros!</h1>
-        <p className="hero-description">
+        <h1 className="hero-title desktop-only">Aprende y Canta con Nosotros!</h1>
+        <h1 className="hero-title mobile-only">Canta con nosotros</h1>
+        
+        <p className="hero-description desktop-only">
           Únete a Luni, Capibara y Cepillo en sus divertidas aventuras llenas de música, colores y mucho aprendizaje.
+        </p>
+        <p className="hero-description mobile-only">
+          Unete a la familia No Sugar Kids
         </p>
         
         <div className="hero-buttons">

@@ -22,7 +22,10 @@ const Header = ({ theme, toggleTheme }) => {
     <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
       <div className="header-content">
         <div className="logo-container">
-          <img src="/logo.png" alt="No Sugar Kids Logo" className="logo-img" />
+          <picture>
+            <source media="(max-width: 768px)" srcSet="/logo-mobile.png" />
+            <img src="/logo.png" alt="No Sugar Kids Logo" className="logo-img" />
+          </picture>
         </div>
         
         <div className="header-actions">

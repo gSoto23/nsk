@@ -96,6 +96,14 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
   .mobile-menu-btn {
     display: block;
   }
