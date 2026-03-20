@@ -1,16 +1,65 @@
-# React + Vite
+# No Sugar Kids Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Página web oficial de **No Sugar Kids**, diseñada para promocionar de forma interactiva y segura los videos y canciones infantiles de **Luni, Capibara y Cepillo**. 
 
-Currently, two official plugins are available:
+El sitio cuenta con una interfaz moderna, limpia y altamente responsiva inspirada en plataformas de streaming como Netflix.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Características Principales
 
-## React Compiler
+- **Diseño Responsivo (Mobile First)**: Adaptación arquitectónica con recursos de imágenes específicos para celulares (`-mobile`) y dimensiones optimizadas de lectura.
+- **Theming Dinámico**: Switcher integrado de Modo Claro / Oscuro usando variables nativas de CSS para una experiencia personalizada.
+- **Reproductor de Video Modal**: Reproducción inmersiva de iframes de YouTube sin abandonar el ecosistema de la página.
+- **SEO Ready**: Etiquetas OpenGraph, Twitter Cards y Meta Descriptions altamente optimizadas para indexación y compartición en WhatsApp, Facebook y Twitter.
+- **Redes Sociales**: Barra inferior interactiva con animaciones colorizadas para derivar tráfico a YouTube, Instagram, TikTok y Spotify.
+- **Rendimiento Excepcional**: Compilado súper rápido vía Vite y React.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack Tecnológico
 
-## Expanding the ESLint configuration
+- **Librería UI**: React.js 19
+- **Tooling**: Vite
+- **Estilización**: CSS3 Puro (Vanilla CSS) utilizando variables globales para el esquema de colores.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Uso y Desarrollo Local
+
+Para correr o probar el proyecto en tu propia computadora:
+
+```bash
+# Instala las dependencias del proyecto
+npm install
+
+# Levanta el servidor local de desarrollo
+npm run dev
+```
+
+*(El servidor abrirá tu proyecto típicamente en `http://localhost:5173`)*
+
+---
+
+## Guía de Despliegue en Producción (AWS Lightsail)
+
+La aplicación web está diseñada para construirse y servirse de manera estática directamente desde el dominio raíz `nosugarkids.com` alojado en una instancia privada de AWS Lightsail.
+
+### Pasos de Actualización en el Servidor (Comandos de Emergencia)
+
+Cada vez que realices cambios en el código local y los subas a GitHub (`git push`), deberás sincronizar tu servidor de Lightsail con la rama principal. 
+
+Ingresa a la terminal lograda por SSH de tu servidor Lightsail y ejecuta el siguiente bloque de comandos:
+
+```bash
+# Navegar al directorio de tu servidor web
+cd /var/www/nosugarkids.com
+
+# Descargar la última versión del código desde GitHub
+git fetch --all
+
+# Forzar al servidor a igualarse exactamente a la rama 'main' remota
+git reset --hard origin/main
+
+# Instalar cualquier dependencia de Node nueva (si existiese)
+npm install
+
+# Generar la compilación estática de producción (crea la carpeta /dist)
+npm run build
+```
+
+📌 **Nota Técnica**: Tras correr `npm run build`, Vite depositará todos los archivos listos (HTML, JS, CSS y assets) dentro de la carpeta `/dist/`.Asegúrate de que tu servicio Nginx/Apache apunte su *Document Root* hacia esta carpeta de distribución.
