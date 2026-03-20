@@ -1,0 +1,72 @@
+:root {
+  /* Brand Colors */
+  --color-mint: #6bd9b6;
+  --color-yellow: #fdd85d;
+  --color-pink: #ff6b6b;
+  --color-tan: #f0c39f; /* Capibara base */
+  
+  /* Netflix-style Theme */
+  --bg-primary: #141414;
+  --bg-secondary: transparent;
+  --text-primary: #ffffff;
+  --text-secondary: #e5e5e5;
+  --transition-speed: 0.3s;
+}
+
+:root[data-theme='light'] {
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #ffffff;
+  --text-primary: #141414;
+  --text-secondary: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  outline: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-mint);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
