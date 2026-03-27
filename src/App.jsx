@@ -13,7 +13,7 @@ const App = () => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
-  // The 2 videos provided by the user
+  // The 3 videos provided by the user
   const channelVideos = [
     {
       id: "3xn09m2eTC8",
@@ -26,6 +26,12 @@ const App = () => {
       title: "Luni",
       embedUrl: "https://www.youtube.com/embed/PGkFmC6ikYA",
       thumbnail: "/thumbnail-2.jpg"
+    },
+    {
+      id: "YyR4rLK9kPM",
+      title: "Buenas Noches",
+      embedUrl: "https://www.youtube.com/embed/YyR4rLK9kPM?si=oAMoNUbxaiyV_DLU",
+      thumbnail: "/thumbnail-3.jpg"
     }
   ];
 
