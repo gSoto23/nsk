@@ -32,6 +32,12 @@ const App = () => {
       title: "Buenas Noches",
       embedUrl: "https://www.youtube.com/embed/YyR4rLK9kPM?si=oAMoNUbxaiyV_DLU",
       thumbnail: "/thumbnail-3.jpg"
+    },
+    {
+      id: "Rrs2YjZld1g",
+      title: "Auxilio Cepillo!",
+      embedUrl: "https://www.youtube.com/embed/Rrs2YjZld1g?si=kZIr0QHZ4wA1iGGD",
+      thumbnail: "/thumbnail-4.png"
     }
   ];
 
