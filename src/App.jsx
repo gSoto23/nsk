@@ -38,6 +38,12 @@ const App = () => {
       title: "Auxilio Cepillo!",
       embedUrl: "https://www.youtube.com/embed/Rrs2YjZld1g?si=kZIr0QHZ4wA1iGGD",
       thumbnail: "/thumbnail-4.png"
+    },
+    {
+      id: "B5m812ExLoA",
+      title: "Estrellita en el Cielo",
+      embedUrl: "https://www.youtube.com/embed/B5m812ExLoA?si=ukMbTzSPpedAo5Q5",
+      thumbnail: "/thumbnail-5.png"
     }
   ];
 
